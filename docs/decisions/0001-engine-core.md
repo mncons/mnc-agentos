@@ -18,9 +18,20 @@ La elección concreta del motor se evalúa contra criterios explícitos y se reg
 
 ## Alternativas consideradas
 
+La decisión se evaluó como un trade-off entre cuatro estrategias, contra criterios que actúan como medidas de efectividad (MOE) derivadas del contexto. Los pesos son **cualitativos** —no hay puntajes numéricos porque no existe una fuente verificable para ponderarlos con precisión—, pero el orden de importancia lo fijan las fuerzas del contexto: soberanía y ajuste al patrón vertical pesan más que la economía de corto plazo.
+
+| Criterio (MOE) | Construir desde cero | Adoptar un motor OSS único | Servicios gestionados | Multi-framework |
+|---|---|---|---|---|
+| Madurez / mantenimiento | Baja — todo a cargo del equipo | Alta — ecosistema activo | Alta — operada por el proveedor | Media — N ecosistemas, N mantenimientos |
+| Licencia / open-core | Control total | Permisiva, compatible | Términos del proveedor | Variable por framework |
+| Soberanía / continuidad | Alta | Alta — con opción de fork | Baja — dependencia dura | Media |
+| Ajuste al patrón vertical | Alto — a costa de construirlo | Alto — capa de adaptación delgada | Bajo — modelo del proveedor | Bajo — frontera distinta por vertical |
+| Economía | Mala — CAPEX de ingeniería alto y sostenido | Buena — costo marginal por vertical bajo | Mala a escala — costo variable creciente | Mala — esfuerzo multiplicado |
+
 - **Construir el motor desde cero** — máximo control y cero deuda de dependencias. Descartada: el costo de alcanzar y mantener paridad con el ecosistema OSS supera con creces la diferenciación que aportaría, y desvía al equipo del único trabajo no replicable, que es el de dominio.
-- **Componer sobre servicios gestionados de terceros** — time-to-market inmediato y operación mínima. Descartada: contradice el principio local-first, introduce dependencia dura y costo variable en el camino crítico, y cede control sobre datos sensibles del operador.
+- **Componer sobre servicios gestionados de terceros** — time-to-market inmediato y operación mínima. Descartada: contradice el principio local-first, introduce dependencia dura y costo variable en el camino crítico, y cede control sobre datos sensibles del operador (ver [0002 — aislamiento de proveedores](0002-aislamiento-proveedores.md)).
 - **Adoptar varios frameworks, uno por vertical** — permitiría elegir la mejor herramienta por caso. Descartada: multiplica la superficie de mantenimiento, rompe la premisa de un motor único reutilizable y hace que el conocimiento operativo no se acumule.
+- **Adoptar un motor OSS único (elegido)** — concentra el mantenimiento en un ecosistema sano, preserva soberanía con la opción de fork y mantiene limpia la frontera con el patrón vertical a través de una capa de adaptación delgada. Es la única opción que sale bien parada en los criterios de mayor peso sin hundirse en la economía.
 
 ## Consecuencias
 

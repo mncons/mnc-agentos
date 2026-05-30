@@ -46,3 +46,6 @@ Thumbs.db
 
 # === Corpus y material de dominio privado (no debe salir a público) ===
 **/corpus/private/
+
+# === Estado de sesión local (no versionar) ===
+.session-progress.md

@@ -23,12 +23,15 @@ MNC AgentOS invierte esa relación. El motor es genérico, estable y reutilizabl
 mnc-agentos/
 ├── docs/
 │   ├── architecture/
+│   │   ├── engine-core.md        # Responsabilidades del motor (nivel interfaz)
 │   │   ├── vertical-pattern.md   # El patrón vertical = constitución + skills + rúbricas
-│   │   └── engine-core.md        # Responsabilidades del motor (nivel interfaz)
+│   │   └── evaluation.md         # Cómo se evalúa un vertical (Verificación vs Validación)
 │   └── decisions/
 │       ├── TEMPLATE.md           # Plantilla de ADR
-│       └── 0001-engine-core.md   # Adoptar un motor OSS único vs construir desde cero
+│       ├── 0001-engine-core.md   # Adoptar un motor OSS único vs construir desde cero
+│       └── 0002-aislamiento-proveedores.md  # Aislar proveedores tras una capa de adaptación
 ├── CONTRIBUTING.md
+├── ROADMAP.md                    # Direccional: hacia dónde va la plataforma
 └── LICENSE                       # MIT
 ```
 
@@ -36,7 +39,9 @@ mnc-agentos/
 
 1. Empezá por [docs/architecture/engine-core.md](docs/architecture/engine-core.md) para entender qué responsabilidades concentra el motor y cuáles delega.
 2. Seguí con [docs/architecture/vertical-pattern.md](docs/architecture/vertical-pattern.md) para ver cómo un dominio concreto se expresa como configuración.
-3. Revisá [docs/decisions/0001-engine-core.md](docs/decisions/0001-engine-core.md) como ejemplo del formato de decisión que usa el proyecto.
+3. Continuá con [docs/architecture/evaluation.md](docs/architecture/evaluation.md) para ver cómo se decide que un vertical está "listo": las rúbricas son el tercer artefacto del patrón, y se entienden mejor después de leerlo.
+4. Revisá [docs/decisions/0001-engine-core.md](docs/decisions/0001-engine-core.md) y [docs/decisions/0002-aislamiento-proveedores.md](docs/decisions/0002-aislamiento-proveedores.md) como ejemplos del formato de decisión que usa el proyecto.
+5. Cerrá con [ROADMAP.md](ROADMAP.md) para ver hacia dónde apunta la plataforma.
 
 ## Licencia
 
