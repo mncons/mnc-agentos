@@ -14,7 +14,7 @@ Existen tres caminos: construir el motor desde cero, adoptar un framework open s
 
 Adoptamos un **único motor de agentes open source**, con licencia permisiva, como núcleo reutilizable de la plataforma, y limitamos nuestras intervenciones a una **capa de adaptación delgada** sobre sus puntos de extensión. No construimos un motor propio y no acoplamos el camino crítico a servicios gestionados.
 
-La elección concreta del motor se evalúa contra criterios explícitos y se registrará aquí cuando la prueba de concepto cierre: licencia permisiva compatible con open-core, soporte para enrutamiento multi-modelo (incluidos modelos locales), abstracción de memoria/recuperación reemplazable, neutralidad de canal, calidad del modelo de extensión (skills/tools) y salud de la comunidad. El motor seleccionado y los resultados de la prueba de concepto: <!-- TODO: dato real -->
+La elección concreta del motor se evalúa contra criterios explícitos y se registrará aquí cuando la prueba de concepto cierre: licencia permisiva compatible con open-core, soporte para enrutamiento multi-modelo (incluidos modelos locales), abstracción de memoria/recuperación reemplazable, neutralidad de canal, calidad del modelo de extensión (skills/tools) y salud de la comunidad. Candidatos en evaluación al momento de este ADR: **Hive** y **Hermes**, evaluación en curso. La selección final y los resultados de la prueba de concepto se registran aquí al cerrar la evaluación.
 
 ## Alternativas consideradas
 
